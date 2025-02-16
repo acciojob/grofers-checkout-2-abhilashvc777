@@ -16,15 +16,13 @@ body.appendChild(btn)
 	tr.appendChild(td1)
    td1.setAttribute("data-ns-test","grandTotal")
     tbody.appendChild(tr)
-const handeler = (e)=>{ 
-	console.log(e)
+  td1.textContent = "total Price"
+  const handeler = (e)=>{ 
    let totalPrice = 0
 	for(let i=0; i<length; i++){
 	totalPrice = totalPrice  + (Number(price[i].textContent))
-	// price[i]["data-ns-test"] = `${price[i].textContent}`
 	}
 	td1.textContent = `${totalPrice}`
-	td1["data-ns-test"] = `${totalPrice}`
-	console.log(td1["data-ns-test"])
+
 }
 btn.addEventListener("click",handeler) 
