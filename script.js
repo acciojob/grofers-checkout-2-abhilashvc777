@@ -1,5 +1,5 @@
 //your code here
-const price = document.querySelectorAll(`[data-ns-test="prices"]`)
+const price = document.querySelectorAll(`[data-ns-test="price"]`)
 const table = document.querySelector("table")
 const tbody = document.querySelector("tbody")
 let length = price.length
@@ -14,7 +14,7 @@ for(let i=0; i<length; i++){
 	let td1 = td.cloneNode()
 	tr.appendChild(td)
     td.textContent = "total" 
-    td.setAttribute("data-ns-test","prices")
+    td.setAttribute("data-ns-test","price")
 	tr.appendChild(td1)
     td1.textContent = `${total}`
    td1.setAttribute("data-ns-test","grandTotal")
