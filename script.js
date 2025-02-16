@@ -13,9 +13,10 @@ for(let i=0; i<price.length; i++){
 	let td  = document.createElement("td")
 	let td1 = td.cloneNode()
 	tr.appendChild(td)
-    td.textContent = "total"
+    td.textContent = "total" 
     td.setAttribute("data-ns-test","prices")
 	tr.appendChild(td1)
     td1.textContent = `${total}`
    td.setAttribute("data-ns-test","grandTotal")
+   td[data-ns-test] = `${total}`
     tbody.appendChild(tr)
