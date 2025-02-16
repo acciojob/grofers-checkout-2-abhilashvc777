@@ -14,7 +14,7 @@ let length = price.length
     tbody.appendChild(tr)
 	td1["data-ns-test"] = 0
 for(let i=0; i<length; i++){
-	td1["data-ns-test"] = parseFloat(td1["data-ns-test"])  + (parseFloat(price[i].textContent))
+	td1["data-ns-test"] = Number(td1["data-ns-test"])  + (Number(price[i].textContent))
 	price[i]["data-ns-test"] = `${price[i].textContent}`
 }
 let total = td1["data-ns-test"]
