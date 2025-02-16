@@ -18,5 +18,5 @@ for(let i=0; i<length; i++){
 	tr.appendChild(td1)
     td1.textContent = `${total}`
    td1.setAttribute("data-ns-test","grandTotal")
-   td1[data-ns-test] = `${total}`
+   td1["data-ns-test"] = `${total}`
     tbody.appendChild(tr)
