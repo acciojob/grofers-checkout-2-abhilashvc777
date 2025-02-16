@@ -2,9 +2,9 @@
 const price = document.querySelectorAll(`[data-ns-test="prices"]`)
 const table = document.querySelector("table")
 const tbody = document.querySelector("tbody")
-
+let length = price.length
 	let total = 0
-for(let i=0; i<price.length; i++){
+for(let i=0; i<length; i++){
 	total = total + (parseFloat(price[i].textContent))
 	price[i]["data-ns-test"] = `${price[i].textContent}`
 	
