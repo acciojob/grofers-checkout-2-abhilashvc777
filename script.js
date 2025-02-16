@@ -17,7 +17,7 @@ for(let i=0; i<length; i++){
 	td1["data-ns-test"] = Number(td1["data-ns-test"])  + (Number(price[i].textContent))
 	price[i]["data-ns-test"] = `${price[i].textContent}`
 }
-let total = td1["data-ns-test"]
-    td1.textContent = `${total}`
-td1["data-ns-test"] = `${total}`
+let total = Number(td1["data-ns-test"])
+    td1.textContent = Number(`${total}`)
+td1["data-ns-test"] = Number(`${total}`)
 console.log(table)
