@@ -1,4 +1,4 @@
-your code here
+// your code here
 const body = document.querySelector("body")
 const price = document.querySelectorAll(`[data-ns-test="price"]`)
 const table = document.querySelector("table")
@@ -16,7 +16,7 @@ body.appendChild(btn)
 	tr.appendChild(td1)
    td1.setAttribute("data-ns-test","grandTotal")
     tbody.appendChild(tr)
-const handeler = (e)=>{
+const handeler = (e)=>{ 
 	console.log(e)
    let totalPrice = 0
 	for(let i=0; i<length; i++){
