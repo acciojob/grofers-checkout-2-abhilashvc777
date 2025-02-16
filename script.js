@@ -3,12 +3,6 @@ const price = document.querySelectorAll(`[data-ns-test="price"]`)
 const table = document.querySelector("table")
 const tbody = document.querySelector("tbody")
 let length = price.length
-	let total = 0
-for(let i=0; i<length; i++){
-	total = total + (parseFloat(price[i].textContent))
-	price[i]["data-ns-test"] = `${price[i].textContent}`
-	
-}
 	let tr = document.createElement("tr")
 	let td  = document.createElement("td")
 	let td1 = td.cloneNode()
@@ -16,7 +10,13 @@ for(let i=0; i<length; i++){
     td.textContent = "total" 
     td.setAttribute("data-ns-test","price")
 	tr.appendChild(td1)
-    td1.textContent = `${total}`
    td1.setAttribute("data-ns-test","grandTotal")
-   td1["data-ns-test"] = `${total}`
     tbody.appendChild(tr)
+	td1["data-ns-test"] = 0
+for(let i=0; i<length; i++){
+	td1["data-ns-test"] = td1["data-ns-test"] + (parseFloat(price[i].textContent))
+	price[i]["data-ns-test"] = `${price[i].textContent}`
+}
+let total = td1["data-ns-test"]
+    td1.textContent = `${total}`
+td1["data-ns-test"] = `${total}`
